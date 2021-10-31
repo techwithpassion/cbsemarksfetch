@@ -32,7 +32,9 @@ const fs = require('fs');
         console.log('Total Percentage you got is = ', percent / 5 + ' %')
         per = percent / 5
             // const maindata = `${stname} || percent = ${per}%`
-        const maindata = stname + " || percent scored = " + per + "% ||"
+        
+        const maindata = `${stname} \n marks scored:- \n English = ${english} \n Maths = ${math} \n Physics = ${phy} \n Chemistry = ${chem} \n Computer Science = ${combio} \n Total percentage scored = ${per} %`
+//         const maindata = stname + " || percent scored = " + per + "% ||"
 
         fs.appendFile('panschdata.txt', maindata + '\n', (err, data) => {
             if (err) console.log(err)
